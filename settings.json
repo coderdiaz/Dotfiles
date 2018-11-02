@@ -1,0 +1,93 @@
+{
+  // Workbench
+  "workbench.startupEditor": "none",
+  "workbench.colorTheme": "Horizon Italic",
+  "workbench.iconTheme": "city-lights-icons-vsc-light",
+  "workbench.sideBar.location": "right",
+  "workbench.editor.tabSizing": "fit",
+  "workbench.fontAliasing": "auto",
+  "workbench.editor.tabCloseButton": "off",
+  "workbench.activityBar.visible": true,
+  "workbench.colorCustomizations": {
+      "[City Lights]": {
+          "activityBar.border": "#12171b",
+          "titleBar.border": "#12171b",
+          "sideBar.border": "#12171b",
+          "panel.border": "#12171b",
+          "tab.border": "#12171b",
+          "tab.unfocusedHoverBorder": "#12171b",
+      }
+  },
+
+  // Editor
+  "editor.fontFamily": "Dank Mono, Menlo, Monaco, 'Courier New', monospace",
+  "editor.fontLigatures": true,
+  "editor.lineHeight": 35,
+  "editor.minimap.renderCharacters": false,
+  "editor.wordWrap": "wordWrapColumn",
+  "editor.wordWrapColumn": 120,
+  "editor.renderIndentGuides": true,
+  "editor.rulers": [120],
+  "editor.tabSize": 2,
+  "editor.cursorStyle": "block",
+  "editor.renderWhitespace": "all",
+  "editor.colorDecorators": false,
+  "window.openFilesInNewWindow": "on",
+  "window.restoreWindows": "none",
+  "window.titleBarStyle": "custom",
+
+  // Estensions
+  "extensions.ignoreRecommendations": true,
+
+  // ZenMode
+  "zenMode.hideTabs": false,
+  "zenMode.hideStatusBar": false,
+  "zenMode.hideActivityBar": false,
+  "zenMode.centerLayout": false,
+
+  // Terminal
+  "terminal.integrated.fontSize": 14,
+  "terminal.integrated.fontFamily": "Dank Mono",
+  "terminal.integrated.confirmOnExit": false,
+  "terminal.integrated.lineHeight": 1.5,
+  "terminal.integrated.letterSpacing": 1,
+  "terminal.integrated.drawBoldTextInBrightColors": false,
+
+  // Configuration for languages
+  "[javascript]": { "editor.tabSize": 2 },
+  "[html]": { "editor.tabSize": 4 },
+  "[css]": { "editor.tabSize": 2 },
+  "[scss]": { "editor.tabSize": 2 },
+  "[vue]": { "editor.tabSize": 2 },
+  "[typescript]": { "editor.tabSize": 2 },
+  "[go]": {
+      "editor.insertSpaces": false,
+      "editor.formatOnSave": true,
+      "editor.tabSize": 4
+  },
+
+  // Git & Gitlens
+  "git.autofetch": true,
+  "gitlens.keymap": "alternate",
+  "gitlens.advanced.messages": {
+      "suppressCommitHasNoPreviousCommitWarning": false,
+      "suppressCommitNotFoundWarning": false,
+      "suppressFileNotUnderSourceControlWarning": false,
+      "suppressGitVersionWarning": false,
+      "suppressLineUncommittedWarning": false,
+      "suppressNoRepositoryWarning": false,
+      "suppressResultsExplorerNotice": false,
+      "suppressShowKeyBindingsNotice": true
+  },
+  "gitlens.historyExplorer.enabled": true,
+
+  // Npm
+  "npm.enableScriptExplorer": true,
+  "npm.packageManager": "yarn",
+
+  // Breadcrumbs
+  "breadcrumbs.enabled": true,
+
+  // City Lights Icons
+  "city-lights-icons-vsc.hidesExplorerArrows": true,
+}
