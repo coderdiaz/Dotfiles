@@ -1,93 +1,151 @@
 {
-  // Workbench
-  "workbench.startupEditor": "none",
-  "workbench.colorTheme": "Horizon Italic",
-  "workbench.iconTheme": "city-lights-icons-vsc-light",
-  "workbench.sideBar.location": "right",
-  "workbench.editor.tabSizing": "fit",
-  "workbench.fontAliasing": "auto",
-  "workbench.editor.tabCloseButton": "off",
-  "workbench.activityBar.visible": true,
-  "workbench.colorCustomizations": {
-      "[City Lights]": {
-          "activityBar.border": "#12171b",
-          "titleBar.border": "#12171b",
-          "sideBar.border": "#12171b",
-          "panel.border": "#12171b",
-          "tab.border": "#12171b",
-          "tab.unfocusedHoverBorder": "#12171b",
-      }
-  },
-
-  // Editor
-  "editor.fontFamily": "Dank Mono, Menlo, Monaco, 'Courier New', monospace",
-  "editor.fontLigatures": true,
-  "editor.lineHeight": 35,
-  "editor.minimap.renderCharacters": false,
-  "editor.wordWrap": "wordWrapColumn",
-  "editor.wordWrapColumn": 120,
-  "editor.renderIndentGuides": true,
-  "editor.rulers": [120],
+  "editor.fontFamily": "Jetbrains Mono, Monaspace Krypton, MonoLisa, Fira Code, Menlo, Monaco, 'Courier New', monospace",
+  "editor.fontWeight": "400",
+  "editor.lineHeight": 40,
   "editor.tabSize": 2,
-  "editor.cursorStyle": "block",
-  "editor.renderWhitespace": "all",
+  "editor.minimap.size": "fit",
+  "editor.fontLigatures": false,
+  "editor.renderLineHighlight": "gutter",
+  "editor.wordWrapColumn": 140,
+  "editor.wordWrap": "wordWrapColumn",
   "editor.colorDecorators": false,
+  "editor.glyphMargin": false, // Removes the space used mainly for debugging indicators
+  "editor.overviewRulerBorder": false,
+  "editor.hideCursorInOverviewRuler": true,
+  "editor.suggestSelection": "first",
+  "editor.inlineSuggest.enabled": true,
+  "editor.minimap.renderCharacters": false,
+  "editor.cursorStyle": "block",
+  "editor.rulers": [{ "column": 140, "color": "#02ff9635" }],
+  "editor.tokenColorCustomizations": {
+    "[*Light*]": {
+      "textMateRules": [
+        {
+          "scope": "ref.matchtext",
+          "settings": {
+            "foreground": "#000"
+          }
+        }
+      ]
+    },
+    "[*Dark*]": {
+      "textMateRules": [
+        {
+          "scope": "ref.matchtext",
+          "settings": {
+            "foreground": "#fff"
+          }
+        }
+      ]
+    },
+    "textMateRules": []
+  },
+  "editor.scrollbar.vertical": "hidden",
+  "editor.linkedEditing": true,
+  "editor.cursorBlinking": "phase",
+  "editor.guides.bracketPairs": true,
+  "editor.guides.bracketPairsHorizontal": false,
+  "editor.stickyScroll.enabled": true,
+  "editor.cursorSmoothCaretAnimation": "on",
+  "editor.renderWhitespace": "all",
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.minimap.enabled": false,
+  "editor.largeFileOptimizations": false,
+  "editor.formatOnSave": true,
+  "editor.accessibilitySupport": "off",
+
+  // Workbench
+  "workbench.sideBar.location": "right",
+  "workbench.productIconTheme": "fluent-icons",
+  "workbench.iconTheme": "vscode-jetbrains-icon-theme-2023-dark",
+  "workbench.editor.centeredLayoutAutoResize": false,
+  "workbench.editor.showIcons": true,
+  "workbench.editor.tabCloseButton": "off",
+  "workbench.startupEditor": "none",
+  "workbench.tree.renderIndentGuides": "none",
+  "workbench.colorCustomizations": {},
+  "workbench.colorTheme": "GitHub Dark Dimmed",
+  "workbench.layoutControl.enabled": false,
+  "workbench.activityBar.location": "hidden",
+
+  // Window
   "window.openFilesInNewWindow": "on",
   "window.restoreWindows": "none",
   "window.titleBarStyle": "custom",
+  "window.commandCenter": false,
 
-  // Estensions
-  "extensions.ignoreRecommendations": true,
-
-  // ZenMode
-  "zenMode.hideTabs": false,
-  "zenMode.hideStatusBar": false,
+  // Zen Mode
   "zenMode.hideActivityBar": false,
+  "zenMode.fullScreen": false,
   "zenMode.centerLayout": false,
 
-  // Terminal
-  "terminal.integrated.fontSize": 14,
-  "terminal.integrated.fontFamily": "Dank Mono",
-  "terminal.integrated.confirmOnExit": false,
-  "terminal.integrated.lineHeight": 1.5,
-  "terminal.integrated.letterSpacing": 1,
-  "terminal.integrated.drawBoldTextInBrightColors": false,
-
-  // Configuration for languages
-  "[javascript]": { "editor.tabSize": 2 },
-  "[html]": { "editor.tabSize": 4 },
-  "[css]": { "editor.tabSize": 2 },
-  "[scss]": { "editor.tabSize": 2 },
-  "[vue]": { "editor.tabSize": 2 },
-  "[typescript]": { "editor.tabSize": 2 },
-  "[go]": {
-      "editor.insertSpaces": false,
-      "editor.formatOnSave": true,
-      "editor.tabSize": 4
+  // Quote styles
+  "javascript.preferences.quoteStyle": "single",
+  "typescript.preferences.quoteStyle": "single",
+  "[html]": {
+    "javascript.preferences.quoteStyle": "double",
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescriptreact]": {
+    "typescript.preferences.quoteStyle": "single",
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
 
-  // Git & Gitlens
-  "git.autofetch": true,
-  "gitlens.keymap": "alternate",
-  "gitlens.advanced.messages": {
-      "suppressCommitHasNoPreviousCommitWarning": false,
-      "suppressCommitNotFoundWarning": false,
-      "suppressFileNotUnderSourceControlWarning": false,
-      "suppressGitVersionWarning": false,
-      "suppressLineUncommittedWarning": false,
-      "suppressNoRepositoryWarning": false,
-      "suppressResultsExplorerNotice": false,
-      "suppressShowKeyBindingsNotice": true
+  // Prettier
+  "prettier.enableDebugLogs": true,
+  "prettier.singleQuote": true,
+  "prettier.semi": false,
+  "prettier.requireConfig": true,
+
+  // Github & Git
+  "githubPullRequests.pullBranch": "never",
+  "github.copilot.enable": {
+    "*": true,
+    "plaintext": true,
+    "markdown": true,
+    "scminput": false,
+    "yaml": true
   },
-  "gitlens.historyExplorer.enabled": true,
+  "git.autofetch": false,
+  "git.enableCommitSigning": true,
+  "githubPullRequests.createOnPublishBranch": "never",
 
-  // Npm
-  "npm.enableScriptExplorer": true,
-  "npm.packageManager": "yarn",
+  // TailwindCSS class lists get loooong, let them be.
+  "html.format.wrapLineLength": 99999,
 
-  // Breadcrumbs
-  "breadcrumbs.enabled": true,
+  // TailwindCSS IntelliSense
+  "tailwindCSS.experimental.classRegex": [
+    ["cva\\(([^)]*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]"]
+  ],
 
-  // City Lights Icons
-  "city-lights-icons-vsc.hidesExplorerArrows": true,
+  // Miscelaneous
+  "city-lights-icons-vsc.hidesExplorerArrows": false,
+  "scss.validate": false,
+  "extensions.ignoreRecommendations": true,
+  "redhat.telemetry.enabled": false,
+  "terminal.integrated.fontSize": 12,
+  "diffEditor.ignoreTrimWhitespace": false,
+  "html.autoCreateQuotes": false,
+  "todo-tree.general.tags": [
+    "BUG",
+    "HACK",
+    "FIXME",
+    "TODO",
+    "XXX",
+    "[ ]",
+    "[x]",
+    "CRITICAL"
+  ],
+  "dotenv.enableAutocloaking": false,
+  "symbols.hidesExplorerArrows": true,
+  "files.associations": {
+    ".env*": "dotenv",
+    "*.mdx": "markdown"
+  },
+  "[xml]": {
+    "editor.defaultFormatter": "redhat.vscode-xml"
+  },
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "workbench.editor.tabActionCloseVisibility": false,
+  "editor.fontSize": 14
 }
