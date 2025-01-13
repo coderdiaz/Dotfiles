@@ -73,6 +73,8 @@ ZSH_THEME="robbyrussell"
 plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
+
+# Load starship
 eval "$(starship init zsh)"
 
 # User configuration
@@ -102,28 +104,19 @@ eval "$(starship init zsh)"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # Homebrew
-HOMEBREW_NO_ENV_HINTS=true
+HOMEBREW_NO_ENV_HINTS="true"
+export PATH="/opt/homebrew/bin:${PATH}"
 
-# Generated for envman. Do not edit.
-[ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
+# FNM
+eval "$(fnm env --use-on-cd)"
 
-# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
-export PATH="$PATH:$HOME/.rvm/bin"
-
-# Adding platform tools
-export PATH="$PATH:$HOME/Library/Android/sdk/platform-tools"
-export PATH="$PATH:$HOME/Library/Android/sdk/emulator"
-
-#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-export SDKMAN_DIR="$HOME/.sdkman"
-[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
-
-eval "$(/opt/homebrew/bin/brew shellenv)"
-
-# OpenJDK
-export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
-export JAVA_HOME="/Library/Java/JavaVirtualMachines/zulu-17.jdk/Contents/Home"
-export ANDROID_HOME="/Users/coderdiaz/Library/Android/sdk"
+# Ruby
+export LDFLAGS="-L/opt/homebrew/opt/ruby@2.7/lib"
+export CPPFLAGS="-I/opt/homebrew/opt/ruby@2.7/include"
+if [ -d "/opt/homebrew/opt/ruby/bin" ]; then
+  export PATH=/opt/homebrew/opt/ruby/bin:$PATH
+  export PATH=`gem environment gemdir`/bin:$PATH
+fi
 
 # bun completions
 [ -s "/Users/coderdiaz/.bun/_bun" ] && source "/Users/coderdiaz/.bun/_bun"
@@ -132,5 +125,5 @@ export ANDROID_HOME="/Users/coderdiaz/Library/Android/sdk"
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 
-# fnm
-eval "$(fnm env --use-on-cd)"
+# Java
+export PATH="/opt/homebrew/opt/openjdk@11/bin:$PATH"
